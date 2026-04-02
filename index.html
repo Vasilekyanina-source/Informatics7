@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самостоятельная работа | ОГЭ информатика</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f0ff 0%, #e8e0ff 100%);
+            font-family: 'Inter', sans-serif;
+            color: #1e1a2f;
+            line-height: 1.5;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #6b4e9e;
+        }
+        .subtitle {
+            color: #5a4a7a;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #cdb8ff;
+            padding-bottom: 1rem;
+        }
+        .task {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #cdb8ff;
+        }
+        .task:last-child {
+            border-bottom: none;
+        }
+        .task-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #8b5cf6;
+            margin-bottom: 0.8rem;
+        }
+        .task-text {
+            background: white;
+            padding: 1rem;
+            border-left: 4px solid #8b5cf6;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            white-space: pre-wrap;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .task-text p {
+            margin-bottom: 0.5rem;
+        }
+        .task-text code {
+            background: #f0ebff;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.3rem;
+            color: #6b4e9e;
+        }
+        .download-link {
+            display: inline-block;
+            background: #e9e0ff;
+            border: 1px solid #8b5cf6;
+            color: #6b4e9e;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 1rem;
+            margin-bottom: 0.8rem;
+            transition: 0.2s;
+        }
+        .download-link:hover {
+            background: #8b5cf6;
+            color: white;
+        }
+        .solution-btn {
+            background: #f0ebff;
+            border: 1px solid #8b5cf6;
+            color: #6b4e9e;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .solution-btn:hover {
+            background: #8b5cf6;
+            color: white;
+        }
+        .solution {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            margin-top: 0.8rem;
+        }
+        .solution.show {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 0.75rem;
+        }
+        .answer {
+            background: #f0ebff;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            color: #6b4e9e;
+            font-size: 0.9rem;
+        }
+        .answer pre {
+            background: white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-top: 0.5rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        .back-link {
+            display: inline-block;
+            color: #8b5cf6;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: left;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #cdb8ff;
+            color: #8b7aa8;
+            font-size: 0.85rem;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: #cdb8ff;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="https://Vasilekyanina-source.github.io/" class="back-link">← На главную</a>
+    <a href="https://Vasilekyanina-source.github.io/Informatics3/index.html" class="back-link">← К урокам</a>
+    <h1>📝 Задания 15 для самостоятельной работы</h1>
+    <div class="subtitle">Здесь представлены различные 15 задания для тренировки. Если вы хотите проверить свое решение или затрудняетесь в решении, то можно воспользоваться видеоразбором, которое можно открыть по кнопке после каждого задания.</div>
+
+    <!-- ЗАДАНИЕ 1 -->
+    <div class="task">
+        <div class="task-number">Задание 1</div>
+        <div class="task-text">
+Исполнитель Робот умеет перемещаться по лабиринту, начерченному на плоскости, разбитой на клетки. Между соседними (по сторонам) клетками может стоять стена, через которую Робот пройти не может.
+У Робота есть девять команд. Четыре команды – это команды-приказы:
+<b>вверх   вниз   влево   вправо</b>
+При выполнении любой из этих команд Робот перемещается на одну клетку соответственно: вверх ↑, вниз ↓, влево ←, вправо →. Если Робот получит команду передвижения сквозь стену, то он разрушится.
+Также у Робота есть команда <b>закрасить</b>. При её выполнении закрашивается клетка, в которой Робот находится в настоящий момент.
+Ещё четыре команды – это команды проверки условий. Эти команды проверяют, свободен ли путь для Робота в каждом из четырёх возможных направлений:
+<b>сверху свободно   снизу свободно   слева свободно   справа свободно</b>
+Эти команды можно использовать вместе с условием «eсли», имеющим следующий вид:
+<b>если</b> <i>условие</i> <b>то</b>
+<i>последовательность команд</i>
+<b>все</b>
+Здесь <i>условие</i> – одна из команд проверки условия.
+<i>Последовательность команд</i> – это одна или несколько любых команд-приказов.
+Например, для передвижения на одну клетку вправо, если справа нет стенки, и закрашивания клетки можно использовать такой алгоритм:
+<b>если справа свободно то
+вправо
+закрасить
+все</b>
+В одном условии можно использовать несколько команд проверки условий, применяя логические связки <b>и, или, не,</b> например:
+<b>если (справа свободно) и (не снизу свободно) то
+вправо
+все</b>
+Для повторения последовательности команд можно использовать цикл «пока», имеющий следующий вид:
+<b>нц пока</b> <i>условие
+последовательность команд</i>
+<b>кц</b>
+Например, для движения вправо, пока это возможно, можно использовать следующий алгоритм:
+<b>нц пока справа свободно
+вправо
+кц</b>
+<b><i>Выполните задание.</i></b>
+На бесконечном поле имеются четыре стены, соединённые между собой, которые образуют прямоугольник. Длины стен неизвестны. В левой вертикальной стене есть ровно один проход. Проход не может примыкать к углу прямоугольника. Точное место прохода и ширина прохода неизвестна. Робот находится около нижнего конца левой вертикальной стены, снаружи прямоугольника и выше нижней стены.
+На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).
+     <img src="для 1 (15).jpg" alt="Задание 1" style="width: 50%; height: auto; margin: 1rem 0;">
+Напишите для Робота алгоритм, закрашивающий все клетки, расположенные вдоль стен прямоугольника с внешней стороны и угловые клетки. Проход должен остаться незакрашенным. Робот должен закрасить только клетки, удовлетворяющие данному условию. Например, для приведённого выше рисунка Робот должен закрасить следующие клетки (см. рисунок).
+<img src="для 1_1 (15).jpg" alt="Задание 1" style="width: 50%; height: auto; margin: 1rem 0;">
+При исполнении алгоритма Робот не должен разрушиться, выполнение алгоритма должно завершиться. Конечное расположение Робота может быть произвольным. Алгоритм должен решать задачу для любого допустимого расположения стен и любого расположения и размера прохода внутри стены.
+Алгоритм может быть выполнен в среде формального исполнителя или записан в текстовом редакторе.
+Сохраните алгоритм в формате программы Кумир или в текстовом файле. Название файла и каталог для сохранения Вам сообщат организаторы экзамена.
+        </div>
+        <button class="solution-btn" data-target="sol1">🎬 Показать решение</button>
+        <div id="sol1" class="solution">
+            <div class="video-wrapper">
+        <iframe src="https://vkvideo.ru/video_ext.php?oid=-236134792&id=456239023&hash=1080e6216c1a4418&hd=3" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+<footer>
+    <p>КодОГЭ — подготовка к экзамену</p>
+</footer>
+
+<script>
+    document.querySelectorAll('.solution-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const target = document.getElementById(this.dataset.target);
+            if (target) {
+                target.classList.toggle('show');
+                this.textContent = target.classList.contains('show') ? '🎬 Скрыть решение' : '🎬 Показать решение';
+            }
+        });
+    });
+</script>
+</body>
+</html>
